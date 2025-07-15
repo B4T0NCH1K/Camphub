@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
     Name = "CampHub | 1.0",
     Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-    LoadingTitle = "Loading",
+    LoadingTitle = "Loading...",
     LoadingSubtitle = "Please Wait",
     ShowText = "Rayfield", -- for mobile users to unhide rayfield, change if you'd like
     Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
@@ -37,18 +37,55 @@ local Window = Rayfield:CreateWindow({
     }
  })
 
- local ItemsTab = Window:CreateTab("Items", 4483362458) -- Title, Image
+ local ItemsTab = Window:CreateTab("Items", nil) -- Title, Image
+
+ local MiscTab = Window:CreateTab("Misc", nil) -- Title, Image
 
  local Button = ItemsTab:CreateButton({
-    Name = "Get Frog",
+   Name = "Get Frog",
+   Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/B4T0NCH1K/Camphub/refs/heads/main/src/frog.lua"))()
+   end,
+})
+
+ local Button = ItemsTab:CreateButton({
+    Name = "Get Sandwich (If Exist)",
     Callback = function()
-    
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/B4T0NCH1K/Camphub/refs/heads/main/src/sandwich.lua"))()
     end,
  })
 
  local Button = ItemsTab:CreateButton({
-    Name = "Get All Available Items",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/B4T0NCH1K/Camphub/refs/heads/main/src/frog.lua"))()
-    end,
- })
+   Name = "Get Flashlight (If Exist)",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/B4T0NCH1K/Camphub/refs/heads/main/src/flashlight.lua"))()
+   end,
+})
+
+local Button = ItemsTab:CreateButton({
+   Name = "Get Umbrella (If Exist)",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/B4T0NCH1K/Camphub/refs/heads/main/src/umbrella.lua"))()
+   end,
+})
+
+local Button = ItemsTab:CreateButton({
+   Name = "Get Coin (If Exist)",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/B4T0NCH1K/Camphub/refs/heads/main/src/coin.lua"))()
+   end,
+})
+
+local Button = ItemsTab:CreateButton({
+   Name = "Get MedKit (If Exist)",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/B4T0NCH1K/Camphub/refs/heads/main/src/Medkit.lua"))()
+   end,
+})
+
+ local Button = MiscTab:CreateButton({
+   Name = "Remove Bears",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/B4T0NCH1K/Camphub/refs/heads/main/src/rbears.lua"))()
+   end,
+})
