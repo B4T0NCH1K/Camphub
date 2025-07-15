@@ -1,9 +1,11 @@
-local ws = game.Workspace
+local b1 = game.Workspace.bear1
+local b2 = game.Workspace.bear2
+local b3 = game.Workspace.bear3
 
 local function RemoveBears()
-  ws.Bear1:Destroy()
-  ws.Bear2:Destroy()
-  ws.Bear3:Destroy()
+  b1:Destroy()
+  b2:Destroy()
+  b3:Destroy()
 end
 
 RemoveBears()
