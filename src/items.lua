@@ -1,15 +1,29 @@
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local hrp = character:WaitForChild("HumanoidRootPart")
+local Character = game.Players.LocalPlayer.Character
+local hrp = Character:WaitForChild("HumanoidRootPart")
+local ws = game.Workspace
 
-for _, obj in pairs(workspace:GetChildren()) do
-    if obj:IsA("Model") and string.find(obj.Name:lower(), "gear") then
-        if obj:FindFirstChild("HumanoidRootPart") then
-            obj.HumanoidRootPart.CFrame = hrp.CFrame
-                end
-            end
-        end
-    end
+local gear1exist = Workspace:FindFirstChild("gear1")
+local gear2exist = Workspace:FindFirstChild("gear2")
+local gear3exist = Workspace:FindFirstChild("gear3")
+local gear4exist = Workspace:FindFirstChild("gear4")
+local gear5exist = Workspace:FindFirstChild("gear5")
+
+if gear1exist then
+    ws.gear1.CFrame = hrp.CFrame
 end
 
-GetItems()
+if gear2exist then
+    ws.gear2.CFrame = hrp.CFrame
+end
+
+if gear3exist then
+    ws.gear3.CFrame = hrp.CFrame
+end
+
+if gear4exist then
+    ws.gear4.CFrame = hrp.CFrame
+end
+
+if gear5exist then
+    ws.gear5.CFrame = hrp.CFrame
+end
