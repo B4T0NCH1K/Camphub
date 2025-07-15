@@ -1,4 +1,4 @@
-local b1 = game.Workspace.bear1
+local b = game.Workspace.bear
 local b2 = game.Workspace.bear2
 local b3 = game.Workspace.bear3
 
